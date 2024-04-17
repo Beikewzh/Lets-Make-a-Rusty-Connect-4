@@ -1,0 +1,43 @@
+
+.sidebar {
+	&__urls button {
+		position: absolute; /* Position them relative to the browser window */
+		left: -200px; /* Position them outside of the screen */
+		transition: 0.3s; /* Add transition on hover */
+		padding: 15px; /* 15px padding */
+		width: 260px; /* Set a specific width */
+		text-decoration: none; /* Remove underline */
+		font-size: 20px; /* Increase font size */
+		color: var(--color-white); /* White text color */
+		border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+	}
+	&__urls button:hover {
+		left: 0;
+	}
+
+	&__urls button:nth-child(1) {
+		top: 20px;
+		background-color: var(--color-navy-blue);
+	}
+
+	&__urls button:nth-child(2) {
+		top: 90px;
+		background-color: var(--color-c4-p1);
+	}
+
+	&__urls button:nth-child(3) {
+		top: 160px;
+		background-color: var(--color-c4-p2);
+	}
+
+	&__urls button:nth-child(4) {
+		top: 230px;
+		background-color: var(--color-brown);
+	}
+
+	&__urls button:nth-child(5) {
+		top: 300px;
+		background-color: var(--color-primary);
+	}
+	  
+}

@@ -1,0 +1,270 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	height: 100%;
+}
+
+p#left-info {
+	font-size: 26px;
+}
+
+.board {
+	background-color: var(--color-light-grey);
+    padding: 20px;
+    border-radius: 25px;
+	display: flex;
+	margin-bottom: 2rem;
+
+	&--p1 {
+		border: 5px solid var(--color-c4-p1);
+	}
+
+	&--p2 {
+		border: 5px solid var(--color-c4-p2);
+	}
+}
+
+.column {
+	&--p1:hover {
+		background: var(--color-c4-p1);
+	}
+
+	&--p2:hover {
+		background: var(--color-c4-p2);
+	}
+}
+
+.cell {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 10rem;
+	height: 10rem;
+
+	&--floating {
+		border: 10px solid transparent;
+	}
+
+
+}
+
+
+.piece {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-size: 2rem;
+	font-weight: bold;
+
+	border: 10px solid var(--color-white);
+
+	width: 85%;
+	height: 85%;
+	border-radius: 50%;
+
+	transition: background 0.1s linear;
+
+	&--floating {
+		border: 3px transparent;
+		color: var(--color-white);
+		font-size: 3rem;
+		font-weight: bold;
+		background-color: var(--color-navy-blue);
+
+		&--p1 {
+			background-color: var(--color-navy-blue);
+			&:hover {
+				background: var(--color-c4-p1);
+			}
+		}
+
+		&--p2 {
+			background-color: var(--color-brown);
+			&:hover {
+				background: var(--color-c4-p2);
+			}
+		}
+
+		&--hidden {
+			visibility: hidden !important;
+			height: 0;
+		}
+	}
+
+	&--empty {
+		background-color: var(--color-white);
+	}
+
+	&--p1 {
+		background: var(--color-c4-p1);
+		color: var(--color-white);
+	}
+
+	&--p2 {
+		background: var(--color-c4-p2);
+	}
+
+	&--toot-n-otto {
+		background-color: var(--color-white);
+		color: var(--color-primary);
+		font-size: 3rem;
+		font-weight: bold;
+	}
+
+	&--winner {
+		border: 8pt solid var(--color-dark-grey);
+	}
+
+	&--hidden {
+		opacity: 0;
+		border: 2px solid transparent;
+	}
+}
+
+.selection {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+
+	align-self: stretch;
+
+	&__reset {
+		margin-right: 2rem;
+	}
+}
+
+.opponent {
+	display: flex;
+	justify-content: center;
+
+	&--disabled &__button {
+		color: #CCC !important;
+
+		&:hover {
+			background-color: transparent !important;
+		}
+
+		&--selected {
+			background-color: #CCC !important;
+			color: var(--color-white) !important;
+		}
+	}
+
+	&__button {
+		border-radius: 0;
+		border: 2px solid var(--color-primary);
+		background-color: transparent;
+		color: var(--color-primary);
+		font-weight: bold;
+
+		&:first-child {
+			border-radius: 5px 0 0 5px;
+		}
+
+		&:last-child {
+			border-radius: 0 5px 5px 0;
+		}
+
+		&:hover:not(&--selected) {
+			background-color: var(--color-primary-lightest);
+		}
+
+		&--selected {
+			background-color: var(--color-primary);
+			color: var(--color-white);
+		}
+	}
+}
+
+.piece-counts {
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-self: stretch;
+
+		margin-bottom: 2rem;
+
+	}
+
+	&__p1 {
+		font-weight: bold;
+		color: var(--color-c4-p1);
+	}
+
+	&__p2 {
+		font-weight: bold;
+		color: var(--color-c4-p2);
+	}
+}
+
+.game_status {
+	align-self: stretch;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+									
+		
+		&--p1 {
+			color: var(--color-c4-p1);
+		}
+
+		&--p2 {
+			color: var(--color-c4-p2);
+		}
+
+		&--left {
+			clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+		}
+
+		&--right {
+			clip-path: polygon(100% 50%, 0% 100%, 0% 0%);
+		}
+
+		&--text-field {
+			background-color: var(--color-white);
+			clip-path: none;
+			font-weight: bold;
+			font-size: 3rem;
+		}
+	
+					
+	}
+
+@media screen and (max-width: $bp-m) {
+	.container {
+		width: min-content;
+	}
+
+	.cell {
+		width: 14vw;
+		height: 14vw;
+	}
+}
+
+@media screen and (max-width: 488px) {
+	.opponent {
+		margin-top: 1rem;
+
+	}
+
+	.selection__reset {
+		margin-right: 30rem;
+	}
+}
+
+@keyframes down-enter {
+	0% { clip-path: inset(0 0 100% 0); }
+	100% { clip-path: inset(0); }
+  }
+  
+  @keyframes down-leave {
+	0% { clip-path: inset(0); }
+	100% { clip-path: inset(100% 0 0 0); }
+  }

@@ -1,0 +1,61 @@
+// Breakpoints
+$bp-xl: 991px;
+$bp-l: 767px;
+$bp-m: 580px;
+$bp-s: 420px;
+
+:root {
+	// Theme (button, etc)
+	--color-primary: #A091C6;
+	--color-primary-light: #AB9BD4;
+	--color-primary-lightest: #DDE1F8;
+	--color-primary-dark: #8C7FAD;
+	// Checkers, sidebar
+	--color-c4-p1: #B1DEDE; //aoi
+	--color-navy-blue: #6083AB;
+	--color-c4-p2:#F5A087;
+	--color-brown: #C48E89;
+	// Font color
+	--color-white: #FFFFFF;
+	--color-dark-grey: #6D757E;
+	--color-light-grey: #ebebeb;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%; // 1rem = 10px
+}
+
+@media screen and (max-width: $bp-xl) {
+	html {
+		font-size: 55%;
+	}
+}
+
+@media screen and (max-width: $bp-l) {
+	html {
+		font-size: 50%;
+	}
+}
+
+*,
+*::before,
+*::after {
+	font-family: Arial, Helvetica, sans-serif;
+
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+
+.app {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	 width: 100vw;
+	 height: 100vh;
+
+	background-color: var(--color-white);
+}

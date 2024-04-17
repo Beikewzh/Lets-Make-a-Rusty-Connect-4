@@ -1,0 +1,255 @@
+.stats_page {
+    height: 150%;
+    width: 100%;
+}
+
+.bg {
+    background: linear-gradient(-75deg, #1C1A1A, #2B2728, #453F3F, #BEACAE, #A69799, #252222);
+    background-size: 200% 200%;
+    animation: gradient 18s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+}
+
+div.title {
+    color: #252222;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    background-color: #b7acad;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 8px solid black;
+}
+
+p.info {
+    color: #b7acad;
+    clear: both;
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+h2 {
+    color: #FFF0F1;
+    text-align: center;
+    text-justify: auto;
+    margin: 20px;
+}
+
+.pair-4 {
+    width: 25%;
+    float: left;
+}
+
+h2.pair-content {
+    text-align: center;
+    font-size: 24px;
+}
+
+h3 {
+    color: white;
+    text-justify: auto;
+    text-align: center;
+    font-size: 32px;
+    margin: 20px;
+}
+
+.stats {
+    margin: auto;
+}
+
+p.info {
+    color: white;
+}
+
+.stats_header {
+    color: white;
+    font-size: 32px;
+    margin: auto;
+}
+
+.stats_entry {
+    font-size: 24px;
+    padding: 10px 0 0 0;
+}
+
+div.stats {
+    width: 90%;
+    padding-bottom: 140px;
+    background-color: #1F1C1C;
+    border: 12px solid #252222;
+    border-radius: 25px;
+    box-shadow: 4px 4px #696263;
+}
+
+section {
+    font-size: 20px;
+    //background: #B1DEDE;
+}
+
+.row {
+    button {
+        margin: auto;
+        background-color: #b7acad;
+        color: #252222;
+        font-size: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    button:hover {
+        background-color: #1F1C1C;
+        color: white;
+        transition-duration: 0.2s;
+    }
+
+    h2.login-prompt {
+        padding-bottom: 40px;
+    }
+
+    h2.Brand {
+        color: white;
+        font-size: 69px;
+    }
+}
+
+div.tooltip {
+    color: white;
+    font-size: 42px;
+    margin-top: 80px;
+
+    p {
+        border-bottom: 1px dotted #b7acad;
+        text-align: center;
+        margin: auto;
+        width: fit-content;
+        font-size: 42px;
+    }
+}
+
+div.tooltip-pair {
+    color: white;
+    font-size: 42px;
+}
+
+.tooltip, .tooltip-pair {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext, .tooltip-pair .tooltiptext {
+    visibility: hidden;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 28px;
+    background-color: #b7acad;
+    color: #252222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext, .tooltip-pair:hover .tooltiptext {
+    visibility: visible;
+}
+
+span.stats-icon {
+    font-size: 20px;
+    margin-left: 20px;
+    font-style: normal;
+}
+
+pre#rule {
+    background: black;
+    width: max-content;
+    text-align: left;
+    font-weight: lighter;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .row {
+        padding: 40px;
+    }
+    .col-md-12 {
+        width: 100%;
+        padding: 20px;
+    }
+    span#login {
+        margin-left: -350px;
+    }
+    pre#rule {
+        margin-left: -300px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1270px) {
+    pre#rule {
+        margin-left: -500px;
+    }
+    .row {
+        padding: 40px;
+    }
+    .col-lg-6, .col-md-12 {
+        float: left;
+    }
+    .col-lg-6 {
+        width: 50%;
+        float: left;
+    }
+    .col-md-12 {
+        width: 100%;
+        padding: 20px;
+
+        span#login {
+            margin-left: -450px;
+        }
+    }
+}
+
+@media (min-width: 1270px) {
+    .row {
+        padding: 140px;
+    }
+    .button-div {
+        margin-bottom: 130px;
+    }
+    .col-lg-6 {
+        float: left;
+        width: 50%;
+    }
+    span#login {
+        margin-left: -250px;
+    }
+}
+
+@media (min-width: 1270px) and (max-width: 1400px) {
+    .button-div {
+        margin-bottom: 80px;
+    }
+    span#login {
+        margin-left: -250px;
+    }
+}

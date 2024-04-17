@@ -1,0 +1,9 @@
+[package]
+name = "cli"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+strum = "0.20.0"
+strum_macros = "0.20"
+rand = { version = "0.6.5", features = ["wasm-bindgen"] }

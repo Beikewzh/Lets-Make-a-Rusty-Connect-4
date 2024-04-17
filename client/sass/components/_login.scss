@@ -1,0 +1,142 @@
+.login-page {
+	width: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	div.login_box {
+		margin-top: -400px;
+	}
+}
+
+h2.prompt1 {
+	color: #0F0f0f;
+	font-size: 24px;
+	padding-bottom: 10px;
+}
+
+h2.prompt2 {
+	color: #0F0f0f;
+	padding-top: 10px;
+	font-size: 48px;
+}
+
+#login-form {
+	align-self: flex-start;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+}
+
+#button {
+	&--login {
+		width: 60%;
+		margin: auto;
+		background-color: var(--color-primary);
+		margin-bottom: 2rem;
+
+		&:hover {
+			background-color: var(--color-primary-dark);
+		}
+
+		&.button--disabled {
+			background-color: #AAA !important;
+			cursor: default;
+		}
+	}
+
+	&-reg {
+		width: 60%;
+		margin: auto;
+		background-color: var(--color-white);
+		border: 2px solid var(--color-primary);
+		color: var(--color-primary);
+
+		&:hover {
+			background-color: var(--color-primary-lightest);
+		}
+
+		&.button--disabled {
+			background: transparent !important;
+			border-color: #AAA !important;
+			color: #AAA !important;
+			cursor: default;
+		}
+	}
+
+	&-logout {
+		margin: auto;
+		margin-top: 400px;
+	}
+}
+
+.auth__container {
+	width: 60%;
+	height: 5rem;
+	margin: auto;
+	margin-top: 4rem;
+	position: relative;
+	margin-bottom: 4rem;
+
+	label {
+		position: absolute;
+		top: 50%;
+		left: 1rem;
+		font-size: 1.6rem;
+		transform: translateY(-50%);
+
+		transition: all 0.2s ease;
+
+		&.raised {
+			top: -1.5rem;
+			left: 0;
+
+			color: var(--color-primary);
+			font-size: 1.6rem;
+
+			&.error.visited {
+				color: var(--color-error);
+			}
+		}
+	}
+
+	input {
+		width: 100%;
+		height: 100%;
+		padding-left: 10px;
+		font-size: 1.6rem;
+	}
+}
+
+.auth__error {
+	color: var(--color-c4-p1);
+	margin-bottom: 1rem;
+	font-size: 1.6rem;
+	font-weight: bold;
+}
+
+.separator {
+	&__container {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 2rem;
+	}
+	&__line {
+		width: 45%;
+		height: 2px;
+		background-color: #AAA;
+	}
+	&__label {
+		font-size: 1.2rem;
+		color: #AAA;
+		font-weight: bold;
+	}
+}
+span#login {
+	background: #252222;
+	color: white;
+}
