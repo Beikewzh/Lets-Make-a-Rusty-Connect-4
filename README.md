@@ -1,5 +1,4 @@
-### ECE 421 Group Project 3
-Let's Make a Rusty Connect-4
+### Let's Make a Rusty Connect-4
 
 ## Quick Start
 
